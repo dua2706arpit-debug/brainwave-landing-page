@@ -1,5 +1,4 @@
 import React from 'react';
-import heroImage from "../assets/brainwave-hero.webp";
 const AFFILIATE_LINK = "https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net";
 export default function HeroSection() {
   return (
@@ -69,8 +68,13 @@ export default function HeroSection() {
         >
 
         <img
-          src={heroImage}
+          src="/brainwave.webp"
           alt="Billionaire Brain Wave"
+           width="650"
+           height="650"
+           loading="eager"
+           fetchPriority="high"
+           decoding="async"
         />
         </a>
 
@@ -107,7 +111,7 @@ const styles = {
     margin: "40px auto",
     borderRadius: "20px",
     filter: "drop-shadow(0 30px 80px rgba(0,180,255,.35))",
-    animation: "float 5s ease-in-out infinite",
+    animation: none,
   },
   list: {
     listStyleType: 'none',
@@ -165,4 +169,4 @@ const styles = {
   }
 };
 
-export default HeroSection;
+
