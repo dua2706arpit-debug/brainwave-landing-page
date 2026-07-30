@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import productImage from "../assets/brainwave-hero.webp.webp";
+
 
 const salesData = {
+  
   productName: "Billionaire Brain Wave",
-  productImage: productImage,
+  productImage: "/brainwave.webp",
   names: [
     "John M.", "Sarah T.", "Michael R.", "Jennifer L.", "David K.",
     "Emily S.", "Robert P.", "Lisa W.", "James H.", "Maria G."

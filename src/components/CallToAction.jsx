@@ -1,5 +1,5 @@
 import React from "react";
-import guaranteeBadge from "../assets/90-days-guarantee.png";
+import guaranteeBadge from "../assets/90-daysbilllionairwavcom.webp";
 
 const CallToAction = () => {
   return (

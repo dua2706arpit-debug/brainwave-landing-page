@@ -1,8 +1,8 @@
 import React from 'react';
-import rockefeller from "../assets/bonuses/rockefeller-pyramid.png";
-import millionaire from "../assets/bonuses/lazy-millionaire-habits.png";
-import quickCash from "../assets/bonuses/quick-cash-manifestation.png";
-import successStories from "../assets/bonuses/success-stories.png";
+import rockefeller from "../assets/bonuses/rockefeller-pyramicom.webp";
+import millionaire from "../assets/bonuses/lazy habits.webp";
+import quickCash from "../assets/bonuses/quick-cash-manifestatiocom.webp";
+import successStories from "../assets/bonuses/success-story.webp";
 
 const BonusesSection = () => {
   const bonuses = [

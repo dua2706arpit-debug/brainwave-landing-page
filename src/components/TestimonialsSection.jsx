@@ -1,7 +1,7 @@
 import React from 'react';
-import willieImg from "../assets/testimonials/willie.png";
-import jamesImg from "../assets/testimonials/james.png";
-import margoImg from "../assets/testimonials/margo.png";
+import willieImg from "../assets/testimonials/whilecom.webp";
+import jamesImg from "../assets/testimonials/jamecom.webp";
+import margoImg from "../assets/testimonials/margo-com.webp";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -22,6 +22,7 @@ const TestimonialsSection = () => {
       location: "Miami, FL",
       text: "“I listen to the Billionaire Brain Wave program before important work tasks. It helps me feel calm and less distracted. The effect is subtle, but my focus feels better after regular use.”",
       image: margoImg,
+    }
   ];
 
   return (

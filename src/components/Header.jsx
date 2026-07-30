@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from "../assets/billlionairbrainwavelogo.png";
 
 const Header = () => {
+  const logo = "/billlionairbrainwavelog.webp"
   return (
     <header style={styles.header}>
       <div className="container" style={styles.container}>
