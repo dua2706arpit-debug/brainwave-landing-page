@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billionaire Brain Wave – Audio for Wealth Mindset & Focus</title>
+  <meta name="description" content="Billionaire Brain Wave is a neuroscience-inspired 7-minute audio ritual to stimulate theta brainwaves and dissolve money blocks. Instant digital access." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; background: #fff; font-size: 16px; line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ── HEADER ── */
+    #header {
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,.10);
+      position: sticky; top: 0; z-index: 999;
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .header-logo { height: 46px; width: auto; }
+    .header-nav { display: flex; align-items: center; gap: 28px; }
+    .header-nav a { color: #444; font-weight: 500; font-size: 15px; transition: color .2s; }
+    .header-nav a:hover { color: #E8640E; }
+    .btn-order {
+      background: #E8640E; color: #fff !important; font-weight: 700; font-size: 15px;
+      padding: 10px 22px; border-radius: 6px; display: flex; align-items: center; gap: 8px;
+      transition: background .2s, transform .2s;
+    }
+    .btn-order:hover { background: #c5540a; transform: translateY(-1px); }
+    .cart-icon { width: 16px; height: 16px; fill: #fff; flex-shrink: 0; }
+
+    /* ── HERO ── */
+    #hero {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      padding: 60px 0 40px;
+    }
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 40px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
+    }
+    .hero-left { color: #fff; }
+    .hero-h1 {
+      font-size: 2.5rem; font-weight: 800; line-height: 1.25; margin-bottom: 20px;
+    }
+    .hero-h1 .gold { color: #F7CE50; }
+    .hero-desc { font-size: 1rem; color: #ccc; margin-bottom: 22px; line-height: 1.7; }
+    .hero-checks {
+      display: flex; flex-wrap: wrap; gap: 10px 28px; margin-bottom: 30px;
+    }
+    .hero-checks li {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.9rem; font-weight: 600; color: #e0e0e0;
+    }
+    .hero-checks li svg { width: 16px; height: 16px; fill: #F7CE50; flex-shrink: 0; }
+    .btn-unlock {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: #E8640E; color: #fff; font-weight: 700; font-size: 1.05rem;
+      padding: 16px 28px; border-radius: 8px; transition: background .2s, transform .2s;
+      margin-bottom: 14px;
+    }
+    .btn-unlock:hover { background: #c5540a; transform: translateY(-2px); }
+    .btn-unlock svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+    .hero-tagline { font-size: 0.9rem; color: #aaa; margin-bottom: 8px; }
+    .hero-stars { color: #F7CE50; font-size: 1rem; }
+    .hero-right a { display: block; }
+    .hero-right img { border-radius: 10px; width: 100%; }
+
+    /* SVG cart icon */
+    .svg-cart { display: inline-block; }
+
+    /* ── SECTION BASICS ── */
+    .section { padding: 60px 0; }
+    .section.bg-gray { background: #f7f7f7; }
+    .section.bg-dark { background: #0f172a; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+    .sec-title { font-size: 2rem; font-weight: 800; color: #111; text-align: center; margin-bottom: 10px; }
+    .sec-sub { font-size: 1rem; color: #666; text-align: center; margin-bottom: 40px; }
+    .sec-title.white { color: #fff; }
+    .sec-sub.white { color: #94a3b8; }
+
+    /* ── TWO-COL ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+
+    /* ── REVIEWS (top) ── */
+    #reviews-top .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .rev-card { padding: 24px; border: 1px solid #e5e5e5; border-radius: 12px; background: #fff; }
+    .rev-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; }
+    .rev-stars { color: #F7CE50; font-size: 18px; margin-bottom: 10px; }
+    .rev-text { font-style: italic; color: #444; font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px; }
+    .rev-name { font-weight: 700; color: #111; font-size: 0.95rem; }
+    .rev-loc { font-size: 0.83rem; color: #888; }
+
+    /* ── HOW IT WORKS ── */
+    .steps-list { display: flex; flex-direction: column; gap: 20px; }
+    .step-row { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: #fff; border-radius: 10px; border: 1px solid #e5e5e5; }
+    .step-num { background: #2563eb; color: #fff; font-weight: 700; font-size: 1rem; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .step-body p { font-size: 0.92rem; color: #555; }
+
+    /* ── PRICING ── */
+    #pricing { background: #0f172a; padding: 60px 0; }
+    #pricing .sec-title { color: #fff; }
+    #pricing .sec-sub { color: #94a3b8; }
+    .pricing-box {
+      max-width: 620px; margin: 0 auto;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 2px solid #334155; border-radius: 20px; padding: 48px 44px;
+      text-align: center; color: #e2e8f0;
+    }
+    .p-badge { background: #F7CE50; color: #000; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: .5px; padding: 7px 22px; border-radius: 20px; display: inline-block; margin-bottom: 24px; }
+    .p-orig { color: #94a3b8; text-decoration: line-through; font-size: 1rem; margin-bottom: 6px; }
+    .p-price-row { display: flex; justify-content: center; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+    .p-price { font-size: 4.5rem; font-weight: 800; color: #F7CE50; line-height: 1; }
+    .p-once { font-size: 1rem; color: #cbd5e1; }
+    .p-delivery { color: #94a3b8; font-size: 0.95rem; margin-bottom: 32px; }
+    .p-features { text-align: left; margin-bottom: 32px; display: flex; flex-direction: column; gap: 12px; }
+    .p-features li { display: flex; gap: 10px; align-items: center; font-size: 1rem; }
+    .p-check { color: #F7CE50; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+    .p-btns { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .p-btn1 { background: #F7CE50; color: #000; font-weight: 700; font-size: 1rem; padding: 16px; border-radius: 10px; transition: background .2s; border: none; cursor: pointer; width: 100%; }
+    .p-btn1:hover { background: #e5b800; }
+    .p-btn2 { background: transparent; color: #F7CE50; border: 2px solid #F7CE50; font-weight: 700; font-size: 1rem; padding: 14px; border-radius: 10px; cursor: pointer; transition: background .2s; }
+    .p-btn2:hover { background: rgba(247,206,80,.1); }
+    .p-security { display: flex; justify-content: center; gap: 24px; padding-top: 24px; border-top: 1px solid #334155; color: #64748b; font-size: 0.88rem; flex-wrap: wrap; }
+
+    /* ── ICON BOXES GRID ── */
+    .icon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .icon-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 24px; }
+    .icon-card h3 { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+    .icon-card p { font-size: 0.92rem; color: #555; line-height: 1.6; }
+
+    /* ── PROS CONS TABLE ── */
+    .pros-cons-wrap { max-width: 900px; margin: 0 auto; }
+    .pros-cons-table { width: 100%; border-collapse: collapse; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+    .pros-cons-table thead { background: #f9fafb; }
+    .pros-cons-table th { padding: 14px 20px; text-align: left; font-weight: 700; font-size: 1rem; color: #111; border-bottom: 2px solid #e5e7eb; }
+    .pros-cons-table td { padding: 13px 20px; border-bottom: 1px solid #e5e7eb; color: #374151; font-size: 0.95rem; }
+    .pros-cons-table tbody tr:last-child td { border-bottom: none; }
+    .pros-cons-table tbody tr:hover { background: #f9fafb; }
+
+    /* ── HOW TO USE ── */
+    .how-use-list { display: flex; flex-direction: column; gap: 14px; }
+    .how-use-list li { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 16px 18px; }
+    .how-use-list li .num { background: #2563eb; color: #fff; font-weight: 700; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem; }
+    .how-use-list li span { font-size: 0.95rem; color: #333; font-weight: 500; padding-top: 5px; }
+
+    /* ── WHO SHOULD ── */
+    .tab-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .tab-btn { padding: 9px 20px; border: 2px solid #2563eb; border-radius: 6px; background: transparent; color: #2563eb; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all .2s; font-family: 'Inter', sans-serif; }
+    .tab-btn.active { background: #2563eb; color: #fff; }
+    .tab-pane { background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 28px; font-size: 1rem; color: #444; display: none; }
+    .tab-pane.active { display: block; }
+
+    /* ── BONUSES ── */
+    .bonus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .bonus-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .bonus-card img { max-height: 180px; width: auto; margin-bottom: 18px; }
+    .bonus-card h3 { font-size: 1.05rem; font-weight: 700; color: #111; margin-bottom: 10px; }
+    .bonus-card p { font-size: 0.92rem; color: #555; margin-bottom: 12px; }
+    .bonus-value { font-weight: 700; color: #16a34a; margin-bottom: 18px; }
+    .bonus-value s { color: #888; }
+    .btn-claim { display: block; width: 100%; background: #2563eb; color: #fff; font-weight: 700; font-size: 0.95rem; padding: 12px; border-radius: 8px; text-align: center; border: none; cursor: pointer; transition: background .2s; }
+    .btn-claim:hover { background: #1d4ed8; }
+
+    /* ── CTA BANNER ── */
+    #cta { background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%); padding: 70px 20px; text-align: center; color: #fff; }
+    #cta h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 14px; }
+    #cta h2 span { color: #F7CE50; }
+    #cta p { font-size: 1rem; color: rgba(255,255,255,.82); max-width: 660px; margin: 0 auto 30px; }
+    .btn-cta { display: inline-flex; align-items: center; gap: 10px; background: #E8640E; color: #fff; font-weight: 700; font-size: 1.05rem; padding: 18px 40px; border-radius: 8px; transition: background .2s, transform .2s; }
+    .btn-cta:hover { background: #c5540a; transform: translateY(-2px); }
+    .trust-row { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+    .trust-item { color: rgba(255,255,255,.78); font-size: 0.92rem; font-weight: 600; }
+
+    /* ── COUNTDOWN ── */
+    .cd-row { display: flex; gap: 14px; justify-content: center; margin: 26px 0; }
+    .cd-box { background: rgba(255,255,255,.12); border-radius: 8px; padding: 14px 18px; min-width: 72px; text-align: center; }
+    .cd-num { font-size: 2.2rem; font-weight: 800; color: #F7CE50; display: block; line-height: 1; }
+    .cd-lbl { font-size: 0.68rem; text-transform: uppercase; color: rgba(255,255,255,.55); letter-spacing: 1px; margin-top: 3px; display: block; }
+
+    /* ── CUSTOMER TESTIMONIALS ── */
+    #testimonials .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .test-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 28px; }
+    .test-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; }
+    .test-stars { color: #F7CE50; font-size: 18px; text-align: center; margin-bottom: 12px; }
+    .test-text { font-style: italic; color: #444; font-size: 0.93rem; line-height: 1.7; text-align: center; margin-bottom: 14px; }
+    .test-name { font-weight: 700; color: #111; text-align: center; font-size: 0.93rem; }
+    .test-loc { color: #888; font-size: 0.82rem; text-align: center; }
+
+    /* ── GUARANTEE ── */
+    #guarantee { background: #f7f7f7; }
+    .gg-box { max-width: 800px; margin: 0 auto; background: #fff; border-radius: 14px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,.07); display: flex; gap: 32px; align-items: center; }
+    .gg-box img { width: 110px; flex-shrink: 0; }
+    .gg-box h3 { font-size: 1.5rem; font-weight: 800; color: #111; margin-bottom: 10px; }
+    .gg-box p { color: #555; font-size: 0.95rem; }
+
+    /* ── FAQ ── */
+    .faq-wrap { max-width: 820px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid #e5e5e5; }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; cursor: pointer; font-size: 1rem; font-weight: 700; color: #111; gap: 8px; user-select: none; }
+    .faq-arrow { font-size: 1.4rem; color: #2563eb; flex-shrink: 0; transition: transform .3s; }
+    .faq-q.open .faq-arrow { transform: rotate(45deg); }
+    .faq-a { display: none; padding-bottom: 18px; font-size: 0.95rem; color: #555; line-height: 1.7; }
+    .faq-a.open { display: block; }
+
+    /* ── FOOTER ── */
+    footer { background: #111; color: #888; padding: 44px 20px 24px; }
+    .foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 22px; margin-bottom: 26px; }
+    .foot-links a { color: #888; font-size: 0.85rem; transition: color .2s; }
+    .foot-links a:hover { color: #ccc; }
+    .disclaimer { max-width: 820px; margin: 0 auto 22px; font-size: 0.75rem; color: #555; line-height: 1.7; text-align: left; }
+    .foot-copy { text-align: center; font-size: 0.82rem; color: #444; }
+
+    /* ── SALES NOTIFICATION ── */
+    #sn {
+      position: fixed; bottom: 16px; left: 16px; z-index: 9999;
+      max-width: 300px; background: #fff; border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.20); padding: 12px 14px;
+      display: none; align-items: center; gap: 12px;
+    }
+    #sn.show { display: flex; animation: snIn .4s ease-out; }
+    #sn.hide { animation: snOut .4s ease-in forwards; }
+    @keyframes snIn { from{transform:translateX(-110%);opacity:0} to{transform:translateX(0);opacity:1} }
+    @keyframes snOut { from{transform:translateX(0);opacity:1} to{transform:translateX(-110%);opacity:0} }
+    #sn .sn-img { width: 52px; height: 52px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    #sn .sn-text { flex: 1; }
+    #sn .sn-who { font-size: 12px; color: #888; }
+    #sn .sn-what { font-size: 13px; font-weight: 700; color: #111; }
+    #sn .sn-loc { font-size: 11px; color: #aaa; }
+    #sn .sn-time { font-size: 10px; color: #bbb; }
+    #sn .sn-x { position: absolute; top: 5px; right: 8px; background: none; border: none; cursor: pointer; color: #bbb; font-size: 18px; line-height: 1; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px){
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      #reviews-top .rev-grid, #testimonials .test-grid, .icon-grid { grid-template-columns: 1fr 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .bonus-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width:600px){
+      #reviews-top .rev-grid, #testimonials .test-grid, .icon-grid { grid-template-columns: 1fr; }
+      .header-nav { display: none; }
+      .hero-h1 { font-size: 1.9rem; }
+      .p-price { font-size: 3.5rem; }
+      .gg-box { flex-direction: column; text-align: center; }
+      .pricing-box { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header id="header">
+  <div class="header-inner">
+    <img class="header-logo" src="/assets/billlionairbrainwavelogo.png" alt="Billionaire Brain Wave" />
+    <nav class="header-nav">
+      <a href="#benefits">Benefits</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews-top">Reviews</a>
+      <a href="#faq">FAQs</a>
+      <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net"
+   class="btn-order"
+   target="_blank"
+   rel="noopener noreferrer sponsored nofollow">
+   
+   Order Now
+</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+   <div class="hero-inner">
+     <div class="hero-left">
+       <h1 class="hero-h1">
+         <span class="gold">Billionaire Brain Wave™</span> 7-Minute Audio to Rewire Your Brain for Wealth &amp; Success. </h1>
+          <p class="hero-desc">The Billionaire Brain Wave program is a neuroscience-inspired 7-minute audio ritual created by Dr. Thomas Summers &amp; David Mitchell to stimulate theta brainwaves and the hippocampus, dissolving money blocks and aligning your subconscious with abundance.</p> 
+          <ul class="hero-checks">
+             <li>
+               <svg viewBox="0 0 512 512"><path d="M505 174.8l-39.6-39.6c-9.4-9.4-24.6-9.4-33.9 0L192 374.7 80.6 263.2c-9.4-9.4-24.6-9.4-33.9 0L7 302.9c-9.4 9.4-9.4 24.6 0 34L175 505c9.4 9.4 24.6 9.4 33.9 0l296-296.2c9.4-9.5 9.4-24.7.1-34zm-324.3 106c6.2 6.3 16.4 6.3 22.6 0l208-208.2c6.2-6.3 6.2-16.4 0-22.6L366.1 4.7c-6.2-6.3-16.4-6.3-22.6 0L192 156.2l-55.4-55.5c-6.2-6.3-16.4-6.3-22.6 0L68.7 146c-6.2 6.3-6.2 16.4 0 22.6l112 112.2z"/></svg>
+                7 minutes a day, headphones optional. </li>
+                 <li>
+                   <svg viewBox="0 0 512 512"><path d="M505 174.8l-39.6-39.6c-9.4-9.4-24.6-9.4-33.9 0L192 374.7 80.6 263.2c-9.4-9.4-24.6-9.4-33.9 0L7 302.9c-9.4 9.4-9.4 24.6 0 34L175 505c9.4 9.4 24.6 9.4 33.9 0l296-296.2c9.4-9.5 9.4-24.7.1-34zm-324.3 106c6.2 6.3 16.4 6.3 22.6 0l208-208.2c6.2-6.3 6.2-16.4 0-22.6L366.1 4.7c-6.2-6.3-16.4-6.3-22.6 0L192 156.2l-55.4-55.5c-6.2-6.3-16.4-6.3-22.6 0L68.7 146c-6.2 6.3-6.2 16.4 0 22.6l112 112.2z"/></svg>
+                    Removes subconscious money blocks &amp; scarcity wiring. 
+                  </li>
+                   <li> 
+                    <svg viewBox="0 0 512 512"><path d="M505 174.8l-39.6-39.6c-9.4-9.4-24.6-9.4-33.9 0L192 374.7 80.6 263.2c-9.4-9.4-24.6-9.4-33.9 0L7 302.9c-9.4 9.4-9.4 24.6 0 34L175 505c9.4 9.4 24.6 9.4 33.9 0l296-296.2c9.4-9.5 9.4-24.7.1-34zm-324.3 106c6.2 6.3 16.4 6.3 22.6 0l208-208.2c6.2-6.3 6.2-16.4 0-22.6L366.1 4.7c-6.2-6.3-16.4-6.3-22.6 0L192 156.2l-55.4-55.5c-6.2-6.3-16.4-6.3-22.6 0L68.7 146c-6.2 6.3-6.2 16.4 0 22.6l112 112.2z"/></svg>
+                     One-time payment, instant digital access, 90 day guarantee.
+                     </li>
+                     </ul> 
+                     <a  href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net"
+                         class="btn-unlock"
+                         target="_blank"
+                         rel="noopener noreferrer sponsored nofollow"
+                     > 
+                      <svg viewBox="0 0 576 512"><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"/></svg> 
+                      Unlock Billionaire Brain Wave Now
+                     </a>
+                      <p class="hero-tagline">Billionaire Brain Wave Official Program</p>
+                       <p class="hero-stars">⭐⭐⭐⭐⭐ <span style="color:#ccc;font-size:.9rem;">5.0/ 67,021 reviews</span></p> 
+                      </div>
+                       <div class="hero-right">
+                         <a  href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net"
+                             target="_blank"
+                             rel="noopener noreferrer sponsored nofollow">
+                         <img src="/assets/brainwave-hero.webp" alt = "Hero Image"/> 
+                         </a>
+                        </div>
+                       </div>
+                       </section>
+
+<!-- ══ WHAT IS IT ══ -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="sec-title">What Is the Billionaire Brain Wave Program?</h2>
+    <div class="two-col" style="margin-top:32px;">
+      <div>
+        <p style="margin-bottom:14px;color:#444;">Billionaire Brain Wave is a simple, 7‑minute audio technology that uses theta sound waves (around 4–8 Hz) to reprogram your subconscious for wealth, opportunity and confident decision‑making.</p>
+        <p style="margin-bottom:14px;color:#444;">Developed by neuroscientist Dr. Thomas Summers and creator David Mitchell based on research into brainwave entrainment, neuroplasticity and the brain's "wealth center" in the hippocampus.</p>
+        <p style="margin-bottom:14px;color:#444;">Unlike books or courses, you don't "study" the Billionaire Brain Wave program—your job is simply to listen daily while the audio handles the heavy lifting in the background.</p>
+        <p style="margin-bottom:22px;color:#444;">It's 100% digital: no pills, no physical device, just instant streaming and downloads after purchase.</p>
+        <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" 
+         class="btn-unlock"
+         target="_blank"
+         rel="noopener noreferrer sponsored nofollow"
+         style="font-size:.95rem;padding:13px 22px;">
+          <svg style="width:16px;height:16px;fill:#fff;" viewBox="0 0 576 512"><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"/></svg>
+          Buy Billionaire Brain Wave Now
+        </a>
+      </div>
+      <div>
+        <a
+           href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net"
+           target="_blank"
+           rel="noopener noreferrer sponsored nofollow"
+>
+        <img src="/assets/brainwave-hero.webp" alt="Billionaire Brain Wave" style="border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.12);" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REVIEWS TOP ══ -->
+<section id="reviews-top" class="section bg-gray">
+  <div class="wrap">
+    <h2 class="sec-title">Billionaire Brain Wave Reviews</h2>
+    <p class="sec-sub">Join thousands who have transformed their relationship with money and success by using Billionaire Brain Wave.</p>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <img src="/assets/testimonial/brainwave-while-a.png" alt="Willie A" />
+        <div class="rev-stars">⭐⭐⭐⭐⭐</div>
+        <p class="rev-text">"At first, I expected quick results. Over time, I realized the Billionaire Brain Wave program works more as a mental support tool. It helps me stay consistent, think clearly, and approach my goals with patience."</p>
+        <div class="rev-name">Willie A.</div>
+        <div class="rev-loc">Portland, OR</div>
+      </div>
+      <div class="rev-card">
+        <img src="./assets/testimonial/brainwave-james.png" alt="James Thompson" />
+        <div class="rev-stars">⭐⭐⭐⭐⭐</div>
+        <p class="rev-text">"I use the Billionaire Brain Wave program daily in a quiet room. It helps me relax before a busy schedule. I do not see it as a money tool, but it supports my mindset and helps reduce daily stress."</p>
+        <div class="rev-name">James Thompson.</div>
+        <div class="rev-loc">Austin, TX</div>
+      </div>
+      <div class="rev-card">
+        <img src="./assets/testimonial/brainwavemargo-d.png" alt="Margo D" />
+        <div class="rev-stars">⭐⭐⭐⭐⭐</div>
+        <p class="rev-text">"I listen to the Billionaire Brain Wave program before important work tasks. It helps me feel calm and less distracted. The effect is subtle, but my focus feels better after regular use."</p>
+        <div class="rev-name">Margo D.</div>
+        <div class="rev-loc">Miami, FL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="sec-title">How Does Billionaire Brain Wave Rewire Your Wealth Mindset?</h2>
+    <p class="sec-sub">A proven 5-step process that transforms your subconscious relationship with money and success.</p>
+    <div class="steps-list" style="max-width:800px;margin:0 auto;">
+      <div class="step-row"><div class="step-num">1</div><div class="step-body"><h3>Theta Brainwave Entrainment</h3><p>The audio delivers slightly different tones to each ear, creating a binaural beat that pulls your brain into a relaxed theta state linked with creativity, learning and deep subconscious access.</p></div></div>
+      <div class="step-row"><div class="step-num">2</div><div class="step-body"><h3>Activating the Brain's Wealth Center</h3><p>Within theta, precise frequencies target the hippocampus and related networks ('wealth center'), opening them to new prosperous beliefs and patterns.</p></div></div>
+      <div class="step-row"><div class="step-num">3</div><div class="step-body"><h3>Dissolving Scarcity Wiring</h3><p>Repeated listening helps weaken old neural pathways connected to fear, procrastination and self-sabotage around money, replacing them with success-driven responses.</p></div></div>
+      <div class="step-row"><div class="step-num">4</div><div class="step-body"><h3>Installing Billionaire-Level Habits</h3><p>Over time, users report more confident choices, better risk-assessment, higher focus and noticing opportunities they used to overlook—core traits seen in high performers.</p></div></div>
+      <div class="step-row"><div class="step-num">5</div><div class="step-body"><h3>Daily 7-Minute Ritual</h3><p>Listen once or twice a day—morning, pre-work or before sleep—for at least 21-30 days; many reviews say mindset shifts start in days but compound over weeks.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="btn-unlock" 
+       target="_blank"
+       rel="noopener noreferrer sponsored nofollow"
+       style="font-size:.95rem;padding:13px 22px;">
+        <svg style="width:16px;height:16px;fill:#fff;" viewBox="0 0 576 512"><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"/></svg>
+        Start the Billionaire Brain Wave Program Today
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section id="pricing">
+  <div class="wrap">
+    <h2 class="sec-title white">Get Instant Access to Billionaire Brain Wave</h2>
+    <p class="sec-sub white">The full Billionaire Brain Wave program is available only from the official website for a one-time payment, with no subscriptions or hidden fees.</p>
+    <div class="pricing-box">
+      <span class="p-badge">BEST VALUE</span>
+      <div class="p-orig">Regular Value: $297+</div>
+      <div class="p-price-row"><span class="p-price">$39</span><span class="p-once">one-time</span></div>
+      <p class="p-delivery">Digital Access – Instant Delivery</p>
+      <ul class="p-features">
+        <li><span class="p-check">✓</span><span>Full Billionaire Brain Wave Audio Program</span></li>
+        <li><span class="p-check">✓</span><span>Bonus Wealth-Building Soundtracks</span></li>
+        <li><span class="p-check">✓</span><span>Quick-Start Implementation Guide</span></li>
+        <li><span class="p-check">✓</span><span>Lifetime Digital Access</span></li>
+        <li><span class="p-check">✓</span><span>Free Future Updates</span></li>
+      </ul>
+      <div class="p-btns">
+        <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="p-btn1"
+         target="_blank"
+          rel="noopener noreferrer sponsored nofollow">
+          Access Billionaire Brain Wave Official Website</a>
+        <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net"
+          class="p-btn2"
+          target="_blank"
+          rel="noopener noreferrer sponsored nofollow">Start the Program Today</a>
+      </div>
+      <div class="p-security">
+        <span>🔒 SSL Secure</span>
+        <span>💳 Safe Checkout</span>
+        <span>📦 Instant Delivery</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT CAN IT DO ══ -->
+<section class="section" id="features">
+  <div class="wrap">
+    <h2 class="sec-title">What Can Billionaire Brain Wave Do for You?</h2>
+    <p class="sec-sub">Transform your relationship with money and unlock your brain's natural wealth-building capabilities.</p>
+    <div class="icon-grid">
+      <div class="icon-card"><h3>Remove Money Blocks</h3><p>Remove hidden money blocks and scarcity beliefs holding you back from your true wealth potential.</p></div>
+      <div class="icon-card"><h3>Boost Focus &amp; Creativity</h3><p>Boost focus, creativity and smart decision-making for business, career or investments.</p></div>
+      <div class="icon-card"><h3>Increase Motivation</h3><p>Increase confidence, motivation and follow-through on wealth-building ideas.</p></div>
+      <div class="icon-card"><h3>Heighten Intuition</h3><p>Heighten intuition so you spot opportunities faster and avoid poor deals.</p></div>
+      <div class="icon-card"><h3>Reduce Anxiety</h3><p>Reduce anxiety and procrastination around finances while feeling calmer and more in control.</p></div>
+      <div class="icon-card"><h3>7-Minute Success Ritual</h3><p>Create a daily success ritual that takes only 7 minutes but can reshape your financial trajectory.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="#pricing" class="btn-unlock" style="font-size:.95rem;padding:13px 22px;">
+        <svg style="width:16px;height:16px;fill:#fff;" viewBox="0 0 576 512"><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"/></svg>
+        Start the Billionaire Brain Wave Program Today
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BENEFITS ══ -->
+<section class="section bg-gray" id="benefits">
+  <div class="wrap">
+    <h2 class="sec-title">Benefit Of Billionaire Brain Wave</h2>
+    <p class="sec-sub">The Billionaire Brain Wave program offers benefits linked to mental state, not guaranteed financial results.</p>
+    <div class="icon-grid">
+      <div class="icon-card"><h3>Short Daily Time Commitment</h3><p>The program takes about 7 minutes per day, which makes it easy to stay consistent even with a busy schedule.</p></div>
+      <div class="icon-card"><h3>Easy to Use Audio Format</h3><p>You only need to press play and listen with headphones. No training, reading, or setup is required.</p></div>
+      <div class="icon-card"><h3>Supports Mental Relaxation</h3><p>The audio helps some users reach a calmer state, which can lower daily stress and mental tension.</p></div>
+      <div class="icon-card"><h3>Improve Focus</h3><p>A relaxed brain often focuses better. Users may find it easier to concentrate on tasks after regular use.</p></div>
+      <div class="icon-card"><h3>Builds a Daily Routine</h3><p>Using the program at the same time each day can help build discipline and consistency.</p></div>
+      <div class="icon-card"><h3>No Physical Effort Needed</h3><p>You can use it while sitting or lying down, making it accessible for most people.</p></div>
+      <div class="icon-card"><h3>One-Time Purchase</h3><p>There are no monthly charges, which keeps long-term cost predictable.</p></div>
+      <div class="icon-card"><h3>Can Be Used Anywhere Quiet</h3><p>The program works at home or any quiet place where headphones can be used.</p></div>
+      <div class="icon-card"><h3>Works as a Mindset Support Tool</h3><p>It may help improve mindset by encouraging calm thinking, not by creating money on its own.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="btn-unlock"
+       target="_blank"
+    rel="noopener noreferrer sponsored nofollow"
+     style="font-size:.95rem;padding:13px 22px;">
+        <svg style="width:16px;height:16px;fill:#fff;" viewBox="0 0 576 512"><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"/></svg>
+        Buy Billionaire Brain Wave
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROS & CONS ══ -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="sec-title">Pros and Cons of the Billionaire Brain Wave Program</h2>
+    <div class="pros-cons-wrap" style="margin-top:32px;">
+      <table class="pros-cons-table">
+        <thead><tr><th>Pros</th><th>Cons</th></tr></thead>
+        <tbody>
+          <tr><td>Short 7-minute daily audio</td><td>Best results come with daily use</td></tr>
+          <tr><td>Easy to use, beginner friendly</td><td>Works as a mindset tool, not an income source</td></tr>
+          <tr><td>Fits into busy schedules</td><td>Needs headphones for proper listening</td></tr>
+          <tr><td>May help with relaxation and focus</td><td>Results depend on personal effort</td></tr>
+          <tr><td>One-time payment</td><td>Works best when paired with real action</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW TO USE ══ -->
+<section class="section bg-gray">
+  <div class="wrap">
+    <h2 class="sec-title">How to Use the Billionaire Brain Wave Program?</h2>
+    <div class="two-col" style="margin-top:32px;">
+      <ul class="how-use-list">
+        <li><div class="num">1</div><span>Listen once daily using headphones in a quiet place</span></li>
+        <li><div class="num">2</div><span>Keep volume comfortable and stay relaxed with eyes closed</span></li>
+        <li><div class="num">3</div><span>Play the full 7-minute audio without multitasking</span></li>
+        <li><div class="num">4</div><span>Use it every day for at least 21 days</span></li>
+        <li><div class="num">5</div><span>Expect mental calm and focus, not instant money</span></li>
+      </ul>
+      <img src="/assets/brainwave-hero.webp" alt="Billionaire Brain Wave" style="border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.1);" />
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="btn-unlock"
+      target="_blank"
+    rel="noopener noreferrer sponsored nofollow"
+       style="font-size:.95rem;padding:13px 22px;">
+        <svg style="width:16px;height:16px;fill:#fff;" viewBox="0 0 576 512"><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"/></svg>
+        Buy Billionaire Brain Wave Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO SHOULD ══ -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="sec-title">Who Should Use the Billionaire Brain Wave Program?</h2>
+    <div style="margin-top:32px;">
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab(0)">Entrepreneurs &amp; Side‑Hustlers</button>
+        <button class="tab-btn" onclick="switchTab(1)">Professionals &amp; Career Builders</button>
+        <button class="tab-btn" onclick="switchTab(2)">Manifestation Beginners</button>
+        <button class="tab-btn" onclick="switchTab(3)">Anyone Feeling Money Blocks</button>
+      </div>
+      <div class="tab-pane active">Stuck at an income ceiling who need a mental upgrade, not another tactic. Perfect for those ready to break through their current limitations.</div>
+      <div class="tab-pane">Want sharper focus, better decisions and more courage to negotiate or change careers for higher earnings and fulfillment.</div>
+      <div class="tab-pane">New to manifestation and mindset work who want a structured, science‑backed audio instead of vague affirmations or complex techniques.</div>
+      <div class="tab-pane">Anyone who feels blocked around money and wants a simple audio‑first way to shift deep patterns without hours of therapy or courses.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BONUSES ══ -->
+<section class="section bg-gray">
+  <div class="wrap">
+    <h2 class="sec-title">Billionaire Brain Wave Bonuses!</h2>
+    <div class="bonus-grid" style="margin-top:32px;">
+      <div class="bonus-card">
+        <img src="/assets/bonuses/rockefeller-pyramid.png" alt="The Rockefeller Pyramid" />
+        <h3>Free Bonus #1:<br>The Rockefeller Pyramid</h3>
+        <p>Shows how to grow long-term income using steady wealth-building ideas inspired by Warren Buffett.</p>
+        <div class="bonus-value">Value: <s>$69.95</s></div>
+        <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="btn-claim"
+         target="_blank"
+         rel="noopener noreferrer sponsored nofollow">Claim Now</a>
+      </div>
+      <div class="bonus-card">
+        <img src="/assets/bonuses/lazy-millionaire-habits.png" alt="7 Lazy Millionaire Habits" />
+        <h3>Free Bonus #2:<br>The 7 Lazy Millionaire Habits</h3>
+        <p>Explains simple habits and mindset used by self-made millionaires who value balance over burnout.</p>
+        <div class="bonus-value">Value: <s>$69.95</s></div>
+        <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="btn-claim"
+        target="_blank"
+        rel="noopener noreferrer sponsored nofollow">Claim Now</a>
+      </div>
+      <div class="bonus-card">
+        <img src="/assets/bonuses/quick-cash-manifestation.png" alt="Quick Cash Manifestation" />
+        <h3>Free Bonus #3:<br>Quick Cash Manifestation</h3>
+        <p>Includes soundwave audio designed to support a focused money mindset during financial pressure.</p>
+        <div class="bonus-value">Value: <s>$69.95</s></div>
+        <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="btn-claim"
+        target="_blank"
+          rel="noopener noreferrer sponsored nofollow">Claim Now</a>
+      </div>
+      <div class="bonus-card">
+        <img src="/assets/bonuses/success-stories.png" alt="500 Success Stories" />
+        <h3>Free Bonus #4:<br>500 Billionaire Brain Wave Success Stories</h3>
+        <p>Shares real user stories that highlight mindset, focus, and habit changes over time.</p>
+        <div class="bonus-value">Value: <s>$69.95</s></div>
+        <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="btn-claim"
+        target="_blank"
+          rel="noopener noreferrer sponsored nofollow">Claim Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BANNER ══ -->
+<section id="cta">
+  <h2>Give Your Mind 7 Minutes - Let <span>Billionaire Brain Wave</span> Do the Rest.</h2>
+  <p>Join thousands already using the Billionaire Brain Wave program to replace fear with confidence, scarcity with abundance, and confusion with clear action.</p>
+  <a href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net" class="btn-cta"
+   target="_blank"
+  rel="noopener noreferrer sponsored nofollow">
+    <svg style="width:18px;height:18px;fill:#fff;" viewBox="0 0 576 512"><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"/></svg>
+    Start the Billionaire Brain Wave Program – Official Site
+  </a>
+  <div class="cd-row" id="cd-row">
+    <div class="cd-box"><span class="cd-num" id="cd-h">47</span><span class="cd-lbl">Hours</span></div>
+    <div class="cd-box"><span class="cd-num" id="cd-m">59</span><span class="cd-lbl">Minutes</span></div>
+    <div class="cd-box"><span class="cd-num" id="cd-s">59</span><span class="cd-lbl">Seconds</span></div>
+  </div>
+  <div class="trust-row">
+    <span class="trust-item">🔒 Secure Checkout</span>
+    <span class="trust-item">💯 90-Day Guarantee</span>
+    <span class="trust-item">🚚 Instant Delivery</span>
+  </div>
+</section>
+
+<!-- ══ CUSTOMER TESTIMONIALS ══ -->
+<section id="testimonials" class="section">
+  <div class="wrap">
+    <h2 class="sec-title">Billionaire Brain Wave Program Customer Testimonials</h2>
+    <p class="sec-sub">Real experiences from people who trust us.</p>
+    <div class="test-grid">
+      <div class="test-card">
+        <img src="/assets/jenniferL.png" alt="Jennifer L" />
+        <div class="test-stars">⭐⭐⭐⭐⭐</div>
+        <p class="test-text">"I used the Billionaire Brain Wave program every morning for two weeks. I didn't get instant wealth, but I feel calmer and more focused at work."</p>
+        <div class="test-name">— Jennifer L.</div>
+        <div class="test-loc">Florida, USA</div>
+      </div>
+      <div class="test-card">
+        <img src="/assets/sarahM.png" alt="Sarah M" />
+        <div class="test-stars">⭐⭐⭐⭐⭐</div>
+        <p class="test-text">"The Billionaire Brain Wave program fits my routine easily. Seven minutes is manageable and helps clear my head before a big day."</p>
+        <div class="test-name">— Sarah M.</div>
+        <div class="test-loc">Texas, USA</div>
+      </div>
+      <div class="test-card">
+        <img src="/assets/michalR.png" alt="Michael R" />
+        <div class="test-stars">⭐⭐⭐⭐⭐</div>
+        <p class="test-text">"After two weeks with the Billionaire Brain Wave program, I feel less stressed and more patient during busy days."</p>
+        <div class="test-name">— Michael R.</div>
+        <div class="test-loc">California, USA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GUARANTEE ══ -->
+<section id="guarantee" class="section bg-gray">
+  <div class="wrap">
+    <h2 class="sec-title">Billionaire Brain Wave 90 Day 100% Money-Back Guarantee</h2>
+    <div class="gg-box" style="margin-top:32px;">
+      <img src="/assets/90-days-billlionairwave.png" alt="90 Day Guarantee" />
+      <div>
+        <h3>Try Risk Free for 90 Days</h3>
+        <p>Try Billionaire Brain Wave Program for a few months and if you don't feel a deep mindset shift, you can request a full refund. No questions asked, no hassle. Simply contact support within 90 days of your purchase.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section id="faq" class="section">
+  <div class="wrap">
+    <h2 class="sec-title">Frequently Asked Questions</h2>
+    <div class="faq-wrap" style="margin-top:32px;">
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqToggle(this)"><span>How to Use the Billionaire Brain Wave Program?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a">Listen to the 7-minute audio once daily (headphones recommended), ideally at the same time each day. Most users find morning sessions or just before bed work best for establishing a consistent routine.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqToggle(this)"><span>How fast will I see results?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a">Some people feel calmer and more focused within days; deeper wealth‑mindset shifts typically appear after 21–60 days of consistent listening. Results vary by individual.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqToggle(this)"><span>Is it safe?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a">The Billionaire Brain Wave Program uses non-invasive sound frequencies and is generally safe for healthy adults. People with epilepsy, severe mental health conditions, or sensitivity to audio should consult a healthcare professional before use.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqToggle(this)"><span>Do I need experience with manifestation or meditation?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a">No. Billionaire Brain Wave program is designed as a plug‑and‑play audio for beginners and experienced manifestors alike. Simply press play and listen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqToggle(this)"><span>Are there any hidden subscriptions?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a">No. It's a one-time payment for lifetime access with free updates during your offer. You pay once and get permanent access to all materials.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqToggle(this)"><span>What if it doesn't work for me?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a">It is covered by the full 90-day money-back guarantee. If you don't feel it's worth the investment after giving it an honest try, you can request a full refund with no questions asked.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqToggle(this)"><span>Can I use it on any device?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a">Yes! The Billionaire Brain Wave program is 100% digital and works on any device—smartphone, tablet, laptop, or desktop. You can stream online or download the files for offline listening.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqToggle(this)"><span>What makes it different from regular meditation?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a">Unlike general meditation, Billionaire Brain Wave uses specific theta frequencies (4-8 Hz) designed to target the brain's 'wealth center' in the hippocampus—a focused tool for financial mindset transformation, not generic relaxation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="foot-links">
+    <a href="#">What Is Billionaire Brain Wave Program?</a>
+    <a href="#">How Does Billionaire Brain Wave Work?</a>
+    <a href="#">Billionaire Brain Wave Pricing!</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms And Conditions</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Shipping Info</a>
+    <a href="#">Contact Us</a>
+  </div>
+  <p class="disclaimer">
+    <strong>DISCLAIMER:</strong> The information on this website is for educational purposes only and does not constitute medical, financial, or professional advice. This product has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease.<br /><br />
+    Individual results may vary. Testimonials do not represent typical results and are not a guarantee of success. This product does not promise or guarantee financial or income results.<br /><br />
+    If you are pregnant, nursing, taking medication, or have a medical or mental health condition, consult a qualified professional before use. Intended for adults 18 years of age or older.
+  </p>
+  <p class="foot-copy">© Copyright 2026 Billionaire Brain Wave. All Rights Reserved.</p>
+</footer>
+
+<!-- ══ SALES NOTIFICATION ══ -->
+<div id="sn">
+  <button class="sn-x" onclick="this.parentElement.style.display='none'">×</button>
+  <img class="sn-img" src="/assets/brainwave-hero.webp" alt="" />
+  <div class="sn-text">
+    <div class="sn-who" id="sn-who"></div>
+    <div class="sn-what">Purchased Billionaire Brain Wave</div>
+    <div class="sn-loc" id="sn-loc"></div>
+    <div class="sn-time" id="sn-time"></div>
+  </div>
+</div>
+
+<script>
+/* FAQ */
+function faqToggle(q){
+  const a=q.nextElementSibling;
+  const open=a.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(x=>x.classList.remove('open'));
+  document.querySelectorAll('.faq-q.open').forEach(x=>x.classList.remove('open'));
+  if(!open){a.classList.add('open');q.classList.add('open');}
+}
+
+/* Tabs */
+function switchTab(i){
+  document.querySelectorAll('.tab-btn').forEach((b,j)=>b.classList.toggle('active',j===i));
+  document.querySelectorAll('.tab-pane').forEach((p,j)=>p.classList.toggle('active',j===i));
+}
+
+/* Countdown */
+(function(){
+  const KEY='bbw_end';
+  let end=+localStorage.getItem(KEY)||0;
+  if(end<Date.now()){end=Date.now()+47*3600000+59*60000+59000;localStorage.setItem(KEY,end);}
+  function tick(){
+    const r=Math.max(0,end-Date.now());
+    document.getElementById('cd-h').textContent=String(Math.floor(r/3600000)).padStart(2,'0');
+    document.getElementById('cd-m').textContent=String(Math.floor(r%3600000/60000)).padStart(2,'0');
+    document.getElementById('cd-s').textContent=String(Math.floor(r%60000/1000)).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+})();
+
+/* Sales notification */
+const names=['John M.','Sarah T.','Michael R.','Jennifer L.','David K.','Emily S.','Robert P.','Lisa W.'];
+const locs=['Texas, USA','California, USA','Florida, USA','New York, USA','London, UK','Toronto, Canada','Sydney, Australia'];
+function showSN(){
+  const el=document.getElementById('sn');
+  document.getElementById('sn-who').textContent=names[Math.floor(Math.random()*names.length)];
+  document.getElementById('sn-loc').textContent=locs[Math.floor(Math.random()*locs.length)];
+  document.getElementById('sn-time').textContent=(Math.floor(Math.random()*58)+1)+' minutes ago';
+  el.classList.remove('hide');el.classList.add('show');
+  setTimeout(()=>{el.classList.add('hide');setTimeout(()=>{el.classList.remove('show','hide');},400);},5000);
+}
+setTimeout(showSN,3000);
+setInterval(showSN,18000);
+</script>
+</body>
+</html>
