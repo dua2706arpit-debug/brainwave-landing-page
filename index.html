@@ -180,6 +180,471 @@
     .p-btn2 { background: transparent; color: #F7CE50; border: 2px solid #F7CE50; font-weight: 700; font-size: 1rem; padding: 14px; border-radius: 10px; cursor: pointer; transition: background .2s; }
     .p-btn2:hover { background: rgba(247,206,80,.1); }
     .p-security { display: flex; justify-content: center; gap: 24px; padding-top: 24px; border-top: 1px solid #334155; color: #64748b; font-size: 0.88rem; flex-wrap: wrap; }
+    /* =========================================
+   SCIENCE SECTION
+========================================= */
+
+.section--alt {
+  background:
+    linear-gradient(
+      180deg,
+      #f7f9ff 0%,
+      #f3f6fd 100%
+    );
+}
+
+.section--alt .section-head {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 55px;
+}
+
+
+/* Eyebrow */
+
+.section--alt .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+
+  border: 1px solid #dce3f4;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.55);
+
+  color: #20356f;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+/* Heading */
+
+.section--alt .section-head h2 {
+  margin: 18px 0 18px;
+
+  color: #101b43;
+
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+
+/* Gold line */
+
+.section--alt .rule {
+  width: 85px;
+  height: 5px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 10px;
+
+  background: #e6b82e;
+}
+
+
+/* Intro paragraph */
+
+.section--alt .section-head > p {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  color: #68799f;
+
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   CARD GRID
+========================================= */
+
+.science-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 38px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.science-card {
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe5f2;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 8px 25px rgba(35, 56, 100, .08);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.science-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(35, 56, 100, .13);
+}
+
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.science-image {
+  width: 100%;
+  height: 245px;
+
+  overflow: hidden;
+
+  background: #edf1fa;
+}
+
+.science-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform .5s ease;
+}
+
+.science-card:hover .science-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   FLOATING ICON
+========================================= */
+
+.science-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 70px;
+  height: 70px;
+
+  margin:
+    -35px auto 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1f4fc;
+
+  color: #243a78;
+
+  border: 5px solid #ffffff;
+
+  box-shadow:
+    0 4px 15px rgba(30, 50, 100, .08);
+}
+
+.science-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* Gold icon */
+
+.science-icon--gold {
+  background: #fff2cf;
+  color: #b78300;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.science-content {
+  padding:
+    15px 38px 35px;
+
+  text-align: center;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.science-content h3 {
+  margin: 0 0 14px;
+
+  color: #101b43;
+
+  font-size: 28px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+.science-content p {
+  margin: 0;
+
+  color: #46577e;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   BOTTOM NOTICE
+========================================= */
+
+.science-notice {
+  max-width: 1020px;
+
+  margin:
+    35px auto 0;
+
+  padding:
+    20px 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  border:
+    1px solid #dce4f5;
+
+  border-radius: 25px;
+
+  background:
+    rgba(242, 246, 255, .8);
+}
+
+
+.science-notice p {
+  margin: 0;
+
+  color: #1d315f;
+
+  font-size: 17px;
+
+  line-height: 1.65;
+}
+
+
+/* Notice icon */
+
+.notice-icon {
+  flex: 0 0 auto;
+
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #29478f;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 15px rgba(41, 71, 143, .2);
+}
+
+
+.notice-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .science-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+  }
+
+  .science-card:last-child {
+    grid-column:
+      1 / -1;
+
+    max-width: 500px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .section--alt .section-head {
+    margin-bottom: 35px;
+  }
+
+  .section--alt .section-head h2 {
+    font-size: 32px;
+
+    line-height: 1.2;
+  }
+
+  .section--alt .section-head > p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    padding:
+      0 10px;
+  }
+
+
+  .science-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .science-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+
+  .science-image {
+    height: 210px;
+  }
+
+
+  .science-content {
+    padding:
+      15px 25px 30px;
+  }
+
+
+  .science-content h3 {
+    font-size: 24px;
+  }
+
+
+  .science-content p {
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+
+  .science-notice {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding:
+      25px 20px;
+
+    gap: 15px;
+  }
+
+
+  .science-notice p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+  .section--alt .section-head h2 {
+    font-size: 28px;
+  }
+
+  .section--alt .eyebrow {
+    font-size: 12px;
+
+    padding:
+      7px 13px;
+
+    letter-spacing: 1px;
+  }
+
+  .science-image {
+    height: 185px;
+  }
+
+  .science-icon {
+    width: 62px;
+    height: 62px;
+
+    margin-top: -31px;
+  }
+
+  .science-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+}
 
     /* ── ICON BOXES GRID ── */
     .icon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -372,7 +837,7 @@
 <section class="section">
   <div class="wrap">
     <h2 class="sec-title">What Is the Billionaire Brain Wave Program?</h2>
-    <div class="two-col" style="margin-top:32px;">
+    <div class="two-col" style="margin-top:32px;align-items: stretch;">
       <div>
         <p style="margin-bottom:14px;color:#444;">Billionaire Brain Wave is a simple digital audio program created around the idea that carefully designed sound patterns can support changes in mindset, focus, and personal motivation. It's 7‑minute audio technology that uses theta sound waves (around 4–8 Hz) to reprogram your subconscious for wealth, opportunity and confident decision‑making.</p>
         <p style="margin-bottom:14px;color:#444;">Developed by neuroscientist Dr. Thomas Summers and creator David Mitchell based on research into brainwave entrainment, neuroplasticity and the brain's "wealth center" in the hippocampus.One of the key attractions is simplicity. Instead of spending a significant amount of time studying complicated techniques, users can dedicate just a few minutes to the audio session. </p>
@@ -388,13 +853,15 @@
           Buy Billionaire Brain Wave Now
         </a>
       </div>
-      <div>
+      <div style="display:flex;align-items:stretch;">
         <a
            href="https://1eb8cdiazzs2vye8uluwflnkdt.hop.clickbank.net"
            target="_blank"
            rel="noopener noreferrer sponsored nofollow"
+           style="display:block;width:100%;"
 >
-        <img src="/brainwave.webp" alt="Billionaire Brain Wave audio program" style="border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.12);" />
+       
+<img src="/brainwave.webp" alt="Billionaire Brain Wave audio program" style=" width:100%; height:100%; min-height:100%; object-fit:cover; display:block; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.12); "/>
         </a>
       </div>
     </div>
@@ -517,7 +984,175 @@
     </div>
   </div>
 </section>
+<section class="section section--alt" id="science" aria-labelledby="science-title">
+  <div class="wrap">
 
+    <!-- SECTION HEADER -->
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">The Concepts Behind It</span>
+
+      <h2 id="science-title">
+        Science Behind Billionaire Brain Wave Program
+      </h2>
+
+      <div class="rule"></div>
+
+      <p>
+        Billionaire Brain Wave draws on concepts related to brainwave activity,
+        auditory stimulation, relaxation, and mental conditioning. Its audio
+        emphasizes theta-range frequencies, generally associated with relaxed
+        attention, meditation, visualization, and creative thinking.
+      </p>
+    </div>
+
+
+    <!-- CARDS -->
+    <div class="science-grid">
+
+      <!-- CARD 1 -->
+      <article class="science-card" data-reveal>
+
+        <div class="science-image">
+          <img
+            src="/theta-brainwaves.svg"
+            alt="Theta brainwaves visualization"
+          />
+        </div>
+
+        <div class="science-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M2 12q5.5 -9 11 0t9 0"/>
+          </svg>
+        </div>
+
+        <div class="science-content">
+          <h3>Theta Brainwaves</h3>
+
+          <p>
+            Theta activity typically falls between 4–8 Hz and is commonly
+            observed during deeply relaxed states. The audio uses
+            frequency-based techniques intended to create a calmer
+            environment for reflection, visualization, and focused thinking.
+          </p>
+        </div>
+
+      </article>
+
+
+      <!-- CARD 2 -->
+      <article class="science-card" data-reveal>
+
+        <div class="science-image">
+          <img
+            src="/hippocampus.svg"
+            alt="Illustration of the hippocampus"
+          />
+        </div>
+
+        <div class="science-icon science-icon--gold">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 5a4 4 0 0 0-4 4 3.5 3.5 0 0 0-1 6.8V19h10v-3.2A3.5 3.5 0 0 0 16 9a4 4 0 0 0-4-4z"/>
+          </svg>
+        </div>
+
+        <div class="science-content">
+          <h3>The Hippocampus</h3>
+
+          <p>
+            The hippocampus plays an important role in memory and learning.
+            Because these functions influence how we process experiences and
+            information, the program connects them with developing better
+            mental habits. However, sound alone has not been clinically proven
+            to attract wealth or eliminate financial limitations.
+          </p>
+        </div>
+
+      </article>
+
+
+      <!-- CARD 3 -->
+      <article class="science-card" data-reveal>
+
+        <div class="science-image">
+          <img
+            src="/nueoplasti.webp"
+            alt="Neural network visualization representing neuroplasticity"
+          />
+        </div>
+
+        <div class="science-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12a9 9 0 1 1-2.6-6.4"/>
+            <path d="M21 3v6h-6"/>
+          </svg>
+        </div>
+
+        <div class="science-content">
+          <h3>Neuroplasticity</h3>
+
+          <p>
+            Neuroplasticity refers to the brain’s ability to adapt through
+            learning and repeated experiences. Consistent habits may support
+            changes in thinking over time, although the process is more complex
+            than simply listening to an audio track.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- BOTTOM NOTICE -->
+    <div class="science-notice" data-reveal>
+
+      <div class="notice-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M9 18h6"/>
+          <path d="M10 22h4"/>
+          <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>
+        </svg>
+      </div>
+
+      <p>
+        Overall, the program combines science-inspired audio techniques with
+        mindset practices. It is best viewed as a complementary tool for
+        relaxation, visualization, and focused thinking rather than a
+        guaranteed shortcut to financial success.
+      </p>
+
+    </div>
+
+  </div>
+</section>
 <!-- ══ BENEFITS ══ -->
 <section class="section bg-gray" id="benefits">
   <div class="wrap">

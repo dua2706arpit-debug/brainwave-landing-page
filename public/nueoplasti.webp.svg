@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="purpleBg" cx="60%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#2a0845"/>
+      <stop offset="40%" stop-color="#18042b"/>
+      <stop offset="75%" stop-color="#0e021a"/>
+      <stop offset="100%" stop-color="#05010a"/>
+    </radialGradient>
+
+    <!-- Super bright Nucleus Glow -->
+    <radialGradient id="nucleusCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#fdf4ff"/>
+      <stop offset="55%" stop-color="#f472b6"/>
+      <stop offset="85%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soma (Cell Body) Gradient -->
+    <radialGradient id="somaGrad" cx="52%" cy="48%" r="55%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#c026d3" stop-opacity="0.8"/>
+      <stop offset="75%" stop-color="#7c3aed" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <!-- Dendrite / Axon Linear Gradients -->
+    <linearGradient id="branchGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="50%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <linearGradient id="branchGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e879f9"/>
+      <stop offset="60%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <!-- Intense Synaptic Glow Filter -->
+    <filter id="synapseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="b2"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="b3"/>
+      <feMerge>
+        <feMergeNode in="b3"/>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softPurpleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#purpleBg)"/>
+
+  <!-- Depth of Field / Background Out-of-Focus Neurons and Bokeh -->
+  <g opacity="0.3" filter="url(#softPurpleGlow)">
+    <!-- Distant neuron top left -->
+    <circle cx="160" cy="140" r="18" fill="#7e22ce"/>
+    <path d="M 160,140 L 70,80 M 160,140 L 220,60 M 160,140 L 90,210" stroke="#7e22ce" stroke-width="3"/>
+    
+    <!-- Distant neuron bottom right -->
+    <circle cx="680" cy="480" r="22" fill="#6b21a8"/>
+    <path d="M 680,480 L 750,540 M 680,480 L 740,410 M 680,480 L 590,520" stroke="#6b21a8" stroke-width="3.5"/>
+
+    <!-- Soft Bokeh Orbs -->
+    <circle cx="280" cy="480" r="35" fill="#a855f7" opacity="0.15"/>
+    <circle cx="580" cy="120" r="45" fill="#d946ef" opacity="0.1"/>
+    <circle cx="700" cy="220" r="25" fill="#c084fc" opacity="0.15"/>
+    <circle cx="100" cy="380" r="30" fill="#818cf8" opacity="0.1"/>
+  </g>
+
+  <!-- Distant Synaptic Connecting Fibers in Background -->
+  <g stroke="#9333ea" stroke-opacity="0.25" stroke-width="1.2" fill="none">
+    <path d="M 50,550 C 150,490 280,510 390,440"/>
+    <path d="M 500,80 C 580,160 620,100 750,110"/>
+    <path d="M 220,60 C 290,140 350,110 420,170"/>
+    <path d="M 650,300 C 690,360 710,410 780,430"/>
+  </g>
+
+  <!-- Large Radial Ambient Backlight for Central Neuron -->
+  <circle cx="490" cy="290" r="240" fill="url(#nucleusCore)" opacity="0.35"/>
+
+  <!-- ==================== MAIN NEURON DENDRITES & AXONS ==================== -->
+  <g id="neuralTree" filter="url(#synapseGlow)">
+    <!-- Branch 1: Top-Left Dendritic Arbor -->
+    <path d="M 455,270 
+             C 410,240 370,225 330,195 
+             C 300,175 270,160 230,140 
+             C 195,125 150,115 110,105" 
+          fill="none" stroke="url(#branchGrad1)" stroke-width="5.5" stroke-linecap="round"/>
+    <!-- Sub-branches -->
+    <path d="M 330,195 C 310,160 285,130 250,105 M 285,130 C 270,95 245,75 210,65" 
+          fill="none" stroke="#e879f9" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 230,140 C 220,180 195,210 160,230 M 195,210 C 180,245 150,265 115,280" 
+          fill="none" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 150,115 C 130,85 100,75 65,70" 
+          fill="none" stroke="#f472b6" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Branch 2: Upper-Right Dendrite -->
+    <path d="M 525,265 
+             C 560,230 600,190 645,150 
+             C 675,120 710,95 750,70" 
+          fill="none" stroke="url(#branchGrad2)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Sub-branches -->
+    <path d="M 600,190 C 640,195 675,185 715,180 M 675,185 C 710,210 745,215 780,220" 
+          fill="none" stroke="#e879f9" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M 645,150 C 655,110 675,80 705,55" 
+          fill="none" stroke="#c084fc" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- Branch 3: Right Lateral Axon / Dendrite with multiple synaptic buttons -->
+    <path d="M 545,300 
+             C 595,310 640,320 690,325 
+             C 730,330 765,335 800,340" 
+          fill="none" stroke="url(#branchGrad1)" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M 640,320 C 665,355 690,385 725,410 M 690,385 C 715,420 740,445 775,465" 
+          fill="none" stroke="#e879f9" stroke-width="2.6" stroke-linecap="round"/>
+
+    <!-- Branch 4: Bottom-Right Axon descending -->
+    <path d="M 525,325 
+             C 555,370 585,420 615,470 
+             C 635,505 660,540 685,575" 
+          fill="none" stroke="url(#branchGrad2)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 585,420 C 550,450 520,480 485,510 M 520,480 C 495,520 465,550 435,580" 
+          fill="none" stroke="#c084fc" stroke-width="2.8" stroke-linecap="round"/>
+
+    <!-- Branch 5: Bottom-Left Dendrites -->
+    <path d="M 465,325 
+             C 430,365 390,405 345,445 
+             C 310,475 270,505 225,535" 
+          fill="none" stroke="url(#branchGrad1)" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M 390,405 C 375,445 350,480 320,510" 
+          fill="none" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 345,445 C 320,435 290,430 260,425 M 290,430 C 265,405 235,395 200,390" 
+          fill="none" stroke="#e879f9" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Branch 6: Left Lateral Dendrite -->
+    <path d="M 445,290 
+             C 390,295 340,305 285,315 
+             C 240,325 190,335 140,345" 
+          fill="none" stroke="url(#branchGrad2)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 285,315 C 260,285 230,265 195,250" 
+          fill="none" stroke="#c084fc" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ==================== CENTRAL SOMA (NEURON BODY) ==================== -->
+  <g id="neuronSoma" filter="url(#synapseGlow)">
+    <!-- Irregular organic cell body shape -->
+    <path d="M 495,255 
+             C 525,250 540,270 545,295 
+             C 550,315 535,335 515,340 
+             C 490,345 465,340 450,325 
+             C 435,310 440,285 455,270 
+             C 470,255 480,260 495,255 Z" 
+          fill="url(#somaGrad)" stroke="#f472b6" stroke-width="2.5"/>
+
+    <!-- Brilliant Radiant Nucleus Core -->
+    <circle cx="495" cy="295" r="28" fill="url(#nucleusCore)"/>
+    <circle cx="495" cy="295" r="14" fill="#ffffff"/>
+    <circle cx="493" cy="292" r="7" fill="#fef08a"/>
+  </g>
+
+  <!-- ==================== SYNAPSE TERMINAL BOUTONS & ACTION POTENTIAL SPARKS ==================== -->
+  <!-- Glowing synaptic points undergoing neuroplastic reorganization -->
+  <g fill="#ffffff" filter="url(#synapseGlow)">
+    <!-- Terminal Boutons -->
+    <circle cx="110" cy="105" r="4.5"/>
+    <circle cx="210" cy="65" r="3.5"/>
+    <circle cx="250" cy="105" r="4"/>
+    <circle cx="115" cy="280" r="3.8"/>
+    <circle cx="65" cy="70" r="3.5"/>
+    <circle cx="750" cy="70" r="4.2"/>
+    <circle cx="705" cy="55" r="3.8"/>
+    <circle cx="780" cy="220" r="4"/>
+    <circle cx="800" cy="340" r="4.5"/>
+    <circle cx="775" cy="465" r="4"/>
+    <circle cx="685" cy="575" r="4.5"/>
+    <circle cx="435" cy="580" r="3.8"/>
+    <circle cx="225" cy="535" r="4.2"/>
+    <circle cx="320" cy="510" r="3.5"/>
+    <circle cx="200" cy="390" r="3.5"/>
+    <circle cx="140" cy="345" r="4"/>
+
+    <!-- Electrical impulses traveling along dendrites (Action Potentials) -->
+    <circle cx="370" cy="225" r="3.5" fill="#fef08a"/>
+    <circle cx="270" cy="160" r="3.2" fill="#ffffff"/>
+    <circle cx="580" cy="210" r="3.6" fill="#fef08a"/>
+    <circle cx="675" cy="120" r="3.2" fill="#ffffff"/>
+    <circle cx="615" cy="315" r="3.5" fill="#ffffff"/>
+    <circle cx="570" cy="400" r="3.8" fill="#fef08a"/>
+    <circle cx="380" cy="380" r="3.4" fill="#ffffff"/>
+  </g>
+
+  <!-- Glowing Synaptic Vesicles / Neurotransmitter Clouds -->
+  <g fill="#f472b6" opacity="0.8">
+    <circle cx="102" cy="98" r="1.8"/>
+    <circle cx="118" cy="112" r="1.5"/>
+    <circle cx="758" cy="62" r="2"/>
+    <circle cx="742" cy="78" r="1.6"/>
+    <circle cx="788" cy="228" r="1.8"/>
+    <circle cx="692" cy="582" r="2.2"/>
+    <circle cx="218" cy="542" r="1.7"/>
+    <circle cx="132" cy="352" r="1.8"/>
+  </g>
+
+  <!-- Synaptic Cleft Sparks (Electrical Arc lines) -->
+  <g stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" filter="url(#synapseGlow)">
+    <line x1="110" y1="105" x2="95" y2="95"/>
+    <line x1="750" y1="70" x2="765" y2="58"/>
+    <line x1="780" y1="220" x2="795" y2="215"/>
+    <line x1="775" y1="465" x2="790" y2="475"/>
+    <line x1="225" y1="535" x2="210" y2="548"/>
+  </g>
+
+  <!-- Scientific Label Overlay -->
+  <g opacity="0.7" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#e879f9">
+    <text x="35" y="550" letter-spacing="2">MECHANISM: SYNAPTOGENESIS &amp; REWIRING</text>
+    <text x="35" y="568" font-size="10" opacity="0.75">LONG-TERM POTENTIATION (LTP) &amp; NEURAL PATHWAY EXPANSION</text>
+  </g>
+</svg>
